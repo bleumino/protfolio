@@ -1,16 +1,25 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <title>Nghia – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
+
+<div class="dark-light-toggle">
+  <input type="checkbox" class="checkbox" id="checkbox">
+  <label for="checkbox" class="checkbox-label">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+    <span class="ball"></span>
+  </label>
+</div>
+
     <h1>Hi, I’m <span>Nghia Duc Tran</span></h1>
     <p class="lead">
       IT student focused on machine learning, languages, and creative tech.
@@ -33,6 +42,11 @@
         <h3>Web Experiments</h3>
         <p>Lofyg (vibe coded using chatGPT)</p>
         <a href="https://bleumino.github.io/Lofyg/" target="_blank">Check It Out</a>
+        <ul class="tech-used">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -82,54 +96,73 @@
       <a href="https://www.flinders.edu.au/study/courses/bachelor-information-technology-machine-learning" target="_blank">Find Out More</a>
     </div>
   </div>
-
+<br>
   <!-- Certificates & Online Courses -->
   <h3>Certificates & Online Courses</h3>
+  <p class="small-text">
+    Note: "Proof of Education" links may lead to certificates, badges, or other forms of verification depending on the course provider. Furthermore , some courses may have subsequent changes in their name, curriculum or structure since my completion.
+      </p>
+      <br>
   <div class="education">
     <div class="card">
       <h4>Introduction to Prompt Engineering</h4>
       <p>Simplilearn</p>
-      <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0MjgzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzUyMzk5N183Njk4OTU3MTczMDc3ODE4NjI1OS5wbmciLCJ1c2VybmFtZSI6Ik5naGlhIER1YyBUcmFuIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F7216%2FIntroduction-to-Prompt-Engineering%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1533307683206201973&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVz0kzLfNPKnRO90%2ByrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAOabhmtBAAAA" target="_blank">Check Out</a>
+      <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0MjgzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzUyMzk5N183Njk4OTU3MTczMDc3ODE4NjI1OS5wbmciLCJ1c2VybmFtZSI6Ik5naGlhIER1YyBUcmFuIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F7216%2FIntroduction-to-Prompt-Engineering%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1533307683206201973&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVz0kzLfNPKnRO90%2ByrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAOabhmtBAAAA" target="_blank">Proof of Education</a>
+     <br>
+      <a class="course" href="https://www.simplilearn.com/prompt-engineering-free-course-skillup" target="_blank">Find Out More</a> 
     </div>
     <div class="card">
       <h4>Machine Learning for Beginners: First Step to Become a Machine Learning Engineer</h4>
       <p>Simplilearn</p>
-      <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjU4IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzU0Mjc4Nl83Njk4OTU3MTczMTIxMzQ1MDcxMi5wbmciLCJ1c2VybmFtZSI6Ik5naGlhIER1YyBUcmFuIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6046%2FMachine-Learning-for-Beginners-%3A-First-step-to-become-a-Machine-learning-Engineer%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1533314075085171536&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVT4owLvAtdY7M90%2ByrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAOkmBalBAAAA" target="_blank">Check Out</a>
+      <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjU4IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzU0Mjc4Nl83Njk4OTU3MTczMTIxMzQ1MDcxMi5wbmciLCJ1c2VybmFtZSI6Ik5naGlhIER1YyBUcmFuIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6046%2FMachine-Learning-for-Beginners-%3A-First-step-to-become-a-Machine-learning-Engineer%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1533314075085171536&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVT4owLvAtdY7M90%2ByrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAOkmBalBAAAA" target="_blank">Proof of Education </a>
+    <br>
+      <a class="course" href="https://www.simplilearn.com/free-machine-learning-beginners-course-skillup" target="_blank">Find Out More</a> 
     </div>
     <div class="card">
       <h4>Learn HTML</h4>
-      <p>Google – Proof of Education (No certificate available)</p>
-      <a href="https://542d554b-b641-401c-a381-ff12e87955ae.filesusr.com/ugd/51f1ba_f49179302c274f0da450e55fb0868130.pdf" target="_blank">Check Out</a>
+      <p>Google (No certificate available)</p>
+      <a class="proof" href="https://542d554b-b641-401c-a381-ff12e87955ae.filesusr.com/ugd/51f1ba_f49179302c274f0da450e55fb0868130.pdf" target="_blank">Proof of Education </a>
+      <br>
+      <a class="course" href="https://developers.google.com/profile/badges/playlists/webdev/learn-html" target="_blank"> Find Out More</a>
     </div>
     <div class="card">
       <h4>JavaScript Essentials 1</h4>
      <p>JavaScript Essentials 1 – Not completed (~27% complete)</p>
-      <a href="https://www.netacad.com/courses/javascript-essentials-1?courseLang=en-US" target="_blank">Find Out More</a>
+      <a class="course" href="https://www.netacad.com/courses/javascript-essentials-1?courseLang=en-US" target="_blank">Find Out More</a>
     </div>
     <div class="card">
       <h4>Python – Visually Explained</h4>
       <p>In progress</p>
-      <a href="https://www.youtube.com/playlist?list=PL8HmoRTjTSlEgS2GsFaDr9zDLC1xD9FZf" target="_blank">Find Out More</a>
+      <a class="course" href="https://www.youtube.com/playlist?list=PL8HmoRTjTSlEgS2GsFaDr9zDLC1xD9FZf" target="_blank">Find Out More</a>
     </div>
     <div class="card">
       <h4>numpy</h4>
       <p>Codédex</p>
-      <a href="https://media.licdn.com/dms/image/v2/D562DAQEQJ3VBzWmQVA/profile-treasury-image-shrink_800_800/B56Ztd2TthJsAY-/0/1766806077551?e=1767412800&v=beta&t=iN9WZbzBa0yf9Sb0V4XXmpt0W0B1YxbWBaotvkTwcMM" target="_blank">Find Out More</a>
+      <a class="proof" href="https://media.licdn.com/dms/image/v2/D562DAQEQJ3VBzWmQVA/profile-treasury-image-shrink_800_800/B56Ztd2TthJsAY-/0/1766806077551?e=1767412800&v=beta&t=iN9WZbzBa0yf9Sb0V4XXmpt0W0B1YxbWBaotvkTwcMM" target="_blank">Proof of Education</a>
+      <br>
+      <a class ="course" href="https://www.codedex.io/numpy" target="_blank">Find Out More</a>
     </div>
+
     <div class="card">
       <h4>Machine learning for beginners</h4>
       <p>YouTube Learning (Course by Kylie Ying)</p>
-      <a href="https://media.licdn.com/dms/image/v2/D562DAQFTDVH8DdAsEw/profile-treasury-image-shrink_8192_8192/B56ZrOXLmdI8Ag-/0/1764398775423?e=1767420000&v=beta&t=wD8kogEl8tY9vqb1BeMQIA5UD-1ueW6m8OsHUv2bw3w" target="_blank">Find Out More</a>
-  </div>
+      <a class="proof" href="https://media.licdn.com/dms/image/v2/D562DAQFTDVH8DdAsEw/profile-treasury-image-shrink_8192_8192/B56ZrOXLmdI8Ag-/0/1764398775423?e=1767420000&v=beta&t=wD8kogEl8tY9vqb1BeMQIA5UD-1ueW6m8OsHUv2bw3w" target="_blank">Proof of Education</a>
+      <br>
+            <a class ="course" href="https://www.youtube.com/playlist?list=PLkWv3oO4kHnu095L52vLCVK8YN33yRrd_" target="_blank">Find Out More</a>
+    </div>
   <div class="card">
       <h4>Linear Algebra</h4>
       <p>YouTube Learning (Course by Math with Dr Clair)</p>
-      <a href="https://media.licdn.com/dms/image/v2/D562DAQEqmFYoGw3AaA/profile-treasury-image-shrink_1920_1920/B56Zq0FV5bG0Ac-/0/1763957891507?e=1767420000&v=beta&t=_FkfhNOfmISLHRvKlQWMGEh6tPWUknx3ucuVH-EHkcU" target="_blank">Find Out More</a>
+      <a class="proof" href="https://media.licdn.com/dms/image/v2/D562DAQEqmFYoGw3AaA/profile-treasury-image-shrink_1920_1920/B56Zq0FV5bG0Ac-/0/1763957891507?e=1767420000&v=beta&t=_FkfhNOfmISLHRvKlQWMGEh6tPWUknx3ucuVH-EHkcU" target="_blank">Proof of Education</a>
+      <br>
+      <a class ="course" href="https://www.youtube.com/playlist?list=PLVTG-sq2TyyHv0-40_nhO0PFrxQnPm7U9" target="_blank">Find Out More</a>
     </div>
     <div class="card">
       <h4>Vector calculus</h4>
       <p>Youtube Learning (Course by Math with Dr Clair)</p>
-      <a href="https://media.licdn.com/dms/image/v2/D4E2DAQFgdfHqUTI4Jg/profile-treasury-image-shrink_1920_1920/B4EZq5TV.mHgAc-/0/1764045447862?e=1767420000&v=beta&t=_Xnu_mnKzdui001kIMHP7zdjQJWFnG_7BVq5y9-w2q4" target="_blank">Find Out More</a>
+      <a class="proof" href="https://media.licdn.com/dms/image/v2/D4E2DAQFgdfHqUTI4Jg/profile-treasury-image-shrink_1920_1920/B4EZq5TV.mHgAc-/0/1764045447862?e=1767420000&v=beta&t=_Xnu_mnKzdui001kIMHP7zdjQJWFnG_7BVq5y9-w2q4" target="_blank">Proof of Education</a>
+      <br>
+      <a class ="course" href="https://www.youtube.com/playlist?list=PLVTG-sq2TyyF4mGZbAyhcYc9t6ut5aW15" target="_blank">Find Out More</a>
     </div>
 </section>
 
@@ -140,11 +173,13 @@
       <h3>Codecademy</h3>
       <p>Track my courses and projects</p>
       <a href="https://www.codecademy.com/profiles/nghiaductran" target="_blank">Visit Profile</a>
+      <div class="date-joined-overlay">Joined: Aug 19, 2021</div>
     </div>
     <div class="card">
       <h3>Codédex</h3>
       <p>View my learning progress and exercises</p>
       <a href="https://www.codedex.io/@Bleumino" target="_blank">Visit Profile</a>
+      <div class="date-joined-overlay">Joined: Dec 2025</div>
     </div>
   </div>
 </section>
@@ -171,7 +206,7 @@
 </section>
 
   <footer>
-    © 2025 Nghia · Built using chatGPT because I was too lazy to code it myself.
+    © 2025 Nghia · Built mostly using chatGPT because I was too lazy to code most of it myself.
   </footer>
 
 
