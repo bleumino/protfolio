@@ -1,4 +1,9 @@
 /* style.css */
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+}
+
 :root {
   --bg: #0f0f14;
   --fg: #f5f5f7;
