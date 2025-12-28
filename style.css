@@ -344,3 +344,34 @@ a, button {
 .dark-light-toggler{
   cursor: none;
 }
+
+/* Gradient Text Animation */
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #f39c12 0%,
+    #f6b44f 25%,
+    #4079ff 50%,
+    #6b8dff 75%,
+    #f39c12 100%
+  );
+  background-size: 400% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-shift 10s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text {
+    animation: none;
+    animation: gradient-shift 14s linear infinite;
+  }
+}
+
