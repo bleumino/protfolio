@@ -375,3 +375,15 @@ a, button {
   }
 }
 
+h2 {
+  position: sticky;
+  top: 0;                  /* sticks to top of viewport */
+  background: var(--bg);    /* matches your background */
+  padding: 1rem 0;
+  z-index: 10;
+}
+
+body {
+  scroll-snap-type: y mandatory; /* enable vertical scroll snapping */
+  overflow-y: scroll;
+}
