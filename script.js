@@ -87,3 +87,15 @@ links.forEach(link => {
   link.addEventListener('mouseleave', () => cursor.style.backgroundColor = '#7c7cff'); // default blue
 });
 
+
+document.body.classList.add("loading");
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+
+  setTimeout(() => {
+    loader.classList.add("fade-out");
+    document.body.classList.remove("loading");
+  }, 1200);
+});
+
