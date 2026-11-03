@@ -1,237 +1,816 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="beDcdknWWQ6SvT6MtRnui1KJXIepXS3HQRD0LUOJaZk" />
-  <title>Nghia – Portfolio</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="google-site-verification"
+    content="beDcdknWWQ6SvT6MtRnui1KJXIepXS3HQRD0LUOJaZk"
+  >
+
+  <meta
+    name="description"
+    content="Nghia Duc Tran — IT student specialising in Machine Learning. Explore my projects, technical skills, education and independent learning."
+  >
+
+  <title>Nghia Duc Tran – Portfolio</title>
+
+  <!-- Apply theme before the page renders to prevent flashing -->
   <script>
     (function () {
-      var saved = localStorage.getItem('theme');
-      var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-      var isLight = saved ? saved === 'light' : prefersLight;
-      if (isLight) document.documentElement.classList.add('light');
+      try {
+        const saved = localStorage.getItem('theme');
+        const prefersLight = window.matchMedia(
+          '(prefers-color-scheme: light)'
+        ).matches;
+
+        const isLight = saved
+          ? saved === 'light'
+          : prefersLight;
+
+        if (isLight) {
+          document.documentElement.classList.add('light');
+        }
+      } catch (error) {
+        // Fall back to the default theme.
+      }
     })();
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+  <!-- Navigation -->
+  <nav class="winbar" aria-label="Main navigation">
 
-  <div id="loader">
-    <div class="loader-content">
-      <span class="loader-text">Loading Portfolio</span>
-    </div>
-  </div>
+    <a href="index.html" class="site-brand">
+      NGHIA DUC TRAN
+    </a>
 
-  <nav class="winbar">
-    <div class="winbar-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-    <span class="winbar-path">~/nghia/portfolio</span>
     <div class="winbar-links">
-      <a href="robotics.html">robotics.html</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="robotics.html">Robotics</a>
+      <a href="#contact">Contact</a>
     </div>
-    <div class="dark-light-toggle">
-      <input type="checkbox" class="checkbox" id="checkbox">
+
+    <div class="theme-toggle">
+      <input type="checkbox" id="checkbox" class="checkbox">
+
       <label for="checkbox" class="checkbox-label">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
+        <span>☀️</span>
+        <span>🌙</span>
         <span class="ball"></span>
       </label>
     </div>
+
   </nav>
 
-  <header>
-    <p class="prompt-line"><span class="prompt-user">visitor@nghia</span><span class="prompt-sep">:~$</span> whoami</p>
-    <h1>Hi, I'm <span class="gradient-text">Nghia Duc Tran</span></h1>
-    <p class="lead">
-      IT student focused on machine learning, languages, and creative tech.
-      I build things that sit somewhere between logic and aesthetics.
-    </p>
+
+  <!-- Hero -->
+  <header class="portfolio-hero">
+
+    <div class="hero-topline">
+      <span class="label">PORTFOLIO / 2026</span>
+      <span class="hero-location">Adelaide, Australia ✳</span>
+    </div>
+
+    <div class="hero-copy">
+
+      <p class="hero-eyebrow">HELLO THERE, I'M</p>
+
+      <h1>
+        Nghia Duc
+        <span class="gradient-text">Tran.</span>
+      </h1>
+
+      <p class="lead">
+        An IT student exploring the intersection of machine learning,
+        technology and creativity. I enjoy building things, understanding
+        how they work, and constantly learning something new.
+      </p>
+
+    </div>
+
+    <div class="hero-details">
+      <span>Machine Learning</span>
+      <span>Programming</span>
+      <span>Languages</span>
+      <span>Content Creation</span>
+    </div>
+
+    <div class="hero-actions">
+
+      <a href="#projects" class="hero-link">
+        Explore my work <span aria-hidden="true">↗</span>
+      </a>
+
+      <a href="#about" class="hero-secondary">
+        A little about me <span aria-hidden="true">↓</span>
+      </a>
+
+    </div>
+
+    <span class="hero-decoration hero-decoration-one" aria-hidden="true">✳</span>
+    <span class="hero-decoration hero-decoration-two" aria-hidden="true">✦</span>
+    <span class="hero-decoration hero-decoration-three" aria-hidden="true">✧</span>
+
+    <div class="hero-bottom-note">
+      <span>CURIOUS BY NATURE</span>
+      <span>ALWAYS LEARNING ↗</span>
+    </div>
+
   </header>
 
-  <section>
-    <h2>Experience</h2>
+
+  <!-- Experience -->
+  <section id="experience">
+
+    <div class="section-intro">
+      <p class="label">01 / Background</p>
+      <h2>Experience</h2>
+    </div>
+
     <div class="experience">
-      <div class="card">
-        <h3>No formal experience yet</h3>
+
+      <article class="card">
+
+        <span class="label">Currently Building</span>
+
+        <h3>Developing Practical Experience</h3>
+
         <p class="small-text">
-          Still early in the journey — currently building experience through university projects, self-study, and personal builds like this site.
+          Still early in my professional journey. Currently building
+          experience through university projects, independent study,
+          practical exercises and personal builds like this website.
         </p>
-      </div>
+
+      </article>
+
     </div>
+
   </section>
 
-  <section>
-    <h2>Projects</h2>
+
+  <!-- Projects -->
+  <section id="projects">
+
+    <div class="section-intro">
+      <p class="label">02 / Selected Work</p>
+      <h2>Projects</h2>
+
+      <p class="small-text">
+        A selection of projects exploring programming, data and
+        machine learning.
+      </p>
+    </div>
+
     <div class="projects">
-      <div class="card">
-        <h3>ML Project</h3>
-        <p class="small-text">F1 Finishing Position Prediction: Built and compared five regression models (linear regression, KNN, decision tree, random forest and a PyTorch neural network) to predict an F1 driver’s finishing position from starting grid and team, using race data from 2018 onward; tuned KNN and the decision tree with GridSearchCV. Best test R² was about 0.43 (random forest) on a random 80/20 split. All five models scored within 0.025 of each other, so with only two input features the more complex models added little over linear regression.</p>
-                <a class="course" href="https://github.com/bleumino/F1-prediction" target="_blank">Check out project</a>
-      </div>
+
+      <article class="card project-card">
+
+        <span class="label">Machine Learning / Python</span>
+
+        <h3>F1 Finishing Position Prediction</h3>
+
+        <p class="small-text">
+          Built and compared five regression models to predict an
+          Formula 1 driver's finishing position using starting grid
+          position and constructor information.
+        </p>
+
+        <p class="small-text">
+          The project used Formula 1 race data from 2018 onward and
+          explored Linear Regression, K-Nearest Neighbours, Decision
+          Tree, Random Forest and a PyTorch neural network.
+        </p>
+
+        <p class="small-text">
+          I also tuned KNN and Decision Tree models using GridSearchCV.
+          Random Forest achieved the best test R² of approximately
+          0.43 on a random 80/20 split. Interestingly, all five models
+          performed within 0.025 of each other, suggesting that the
+          limited input features restricted the benefits of more
+          complex models.
+        </p>
+
+        <div class="project-tech">
+          <span>Python</span>
+          <span>Scikit-learn</span>
+          <span>PyTorch</span>
+          <span>Pandas</span>
+          <span>Machine Learning</span>
+        </div>
+
+        <a
+          class="course"
+          href="https://github.com/bleumino/F1-prediction"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View project on GitHub ↗
+        </a>
+
+      </article>
+
     </div>
+
   </section>
 
-  <section>
-    <h2>Skills</h2>
+
+  <!-- Skills -->
+  <section id="skills">
+
+    <div class="section-intro">
+      <p class="label">03 / Capabilities</p>
+      <h2>Skills</h2>
+    </div>
+
     <div class="skills">
-      <div class="card">
-        <h3>Technical / Programming</h3>
+
+      <article class="card">
+
+        <h3>Programming & Technical Skills</h3>
+
         <ul>
-          <li>HTML – intermediate</li>
-          <li>CSS – intermediate</li>
-          <li>Java – basic - intermediate</li>
-          <li>JavaScript – Very Basic / mostly forgotten</li>
-          <li>Python – Competent</li>
-          <li>SQL – Competent</li>
-          <li>C++ – Competent</li>
+
+          <li>
+            <span>Python</span>
+            <span class="skill-level">Competent</span>
+          </li>
+
+          <li>
+            <span>SQL</span>
+            <span class="skill-level">Competent</span>
+          </li>
+
+          <li>
+            <span>C++</span>
+            <span class="skill-level">Competent</span>
+          </li>
+
+          <li>
+            <span>HTML</span>
+            <span class="skill-level">Intermediate</span>
+          </li>
+
+          <li>
+            <span>CSS</span>
+            <span class="skill-level">basic</span>
+          </li>
+
+          <li>
+            <span>JavaScript</span>
+            <span class="skill-level">Basic</span>
+          </li>
+
         </ul>
-      </div>
+
+      </article>
+
     </div>
+
   </section>
 
-  <section>
-    <h2>Education & Courses</h2>
 
-    <!-- Degrees -->
-    <h3>Degrees</h3>
-    <div class="education">
-      <div class="card">
-  <h4>Bachelor of Information Technology (Machine Learning)</h4>
-  <p>Flinders University – Currently Studying</p>
-  <p class="small-text">
-    Commenced in 2025. This course is no longer admitting new students
-    from 2026. Existing students continue under their applicable
-    course rules.
-  </p>
-  <a href="https://handbook.flinders.edu.au/courses/2025/bitmlfp?year=2025"
-     target="_blank"
-     rel="noopener noreferrer">
-    View 2025 Course Handbook
-  </a>
-</div>
-</div>
+  <!-- Education -->
+  <section id="education">
 
-    <!-- Certificates & Online Courses -->
-    <h3>Certificates & Online Courses</h3>
-    <p class="small-text">
-      Note: "Proof of Education" links may lead to certificates, badges, or other forms of verification depending on the course provider. Furthermore, some courses may have subsequent changes in their name, curriculum or structure since my completion.
-    </p>
-    <br>
-    <div class="education">
-      <div class="card">
-        <h4>Introduction to Prompt Engineering</h4>
-        <p class="label">Simplilearn</p>
-        <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0MjgzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzUyMzk5N183Njk4OTU3MTczMDc3ODE4NjI1OS5wbmciLCJ1c2VybmFtZSI6Ik5naGlhIER1YyBUcmFuIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F7216%2FIntroduction-to-Prompt-Engineering%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1533307683206201973&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVz0kzLfNPKnRO90%2ByrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAOabhmtBAAAA" target="_blank">Proof of Education</a>
-        <br>
-        <a class="course" href="https://www.simplilearn.com/prompt-engineering-free-course-skillup" target="_blank">Find Out More</a>
-      </div>
-      <div class="card">
-        <h4>Machine Learning for Beginners: First Step to Become a Machine Learning Engineer</h4>
-        <p class="label">Simplilearn</p>
-        <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjU4IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzU0Mjc4Nl83Njk4OTU3MTczMTIxMzQ1MDcxMi5wbmciLCJ1c2VybmFtZSI6Ik5naGlhIER1YyBUcmFuIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6046%2FMachine-Learning-for-Beginners-%3A-First-step-to-become-a-Machine-learning-Engineer%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1533314075085171536&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVT4owLvAtdY7M90%2ByrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAOkmBalBAAAA" target="_blank">Proof of Education </a>
-        <br>
-        <a class="course" href="https://www.simplilearn.com/free-machine-learning-beginners-course-skillup" target="_blank">Find Out More</a>
-      </div>
-      <div class="card">
-        <h4>Learn HTML</h4>
-        <p>Google (No certificate available)</p>
-        <a class="proof" href="assets/Certificate1.pdf" target="_blank">Proof of Education </a>
-        <br>
-        <a class="course" href="https://developers.google.com/profile/badges/playlists/webdev/learn-html" target="_blank"> Find Out More</a>
-      </div>
-      <div class="card">
-        <h4>JavaScript Essentials 1</h4>
-        <p class="label">Cisco Networking Academy</p>
-        <p class="small-text">JavaScript Essentials 1 – Not completed (~27% complete)</p>
-        <a class="course" href="https://www.netacad.com/courses/javascript-essentials-1?courseLang=en-US" target="_blank">Find Out More</a>
-      </div>
-      <div class="card">
-        <h4>Python – Visually Explained</h4>
-        <p>In progress</p>
-        <a class="course" href="https://www.youtube.com/playlist?list=PL8HmoRTjTSlEgS2GsFaDr9zDLC1xD9FZf" target="_blank">Find Out More</a>
-      </div>
-      <div class="card">
-        <h4>numpy</h4>
-        <p class="label">Codédex</p>
-        <a class="proof" href="assets/badge1.png" target="_blank">Proof of Education</a>
-        <br>
-        <a class="course" href="https://www.codedex.io/numpy" target="_blank">Find Out More</a>
-      </div>
-      <div class="card">
-        <h4>Machine learning for beginners</h4>
-        <p class="label">YouTube Learning (Course by Kylie Ying)</p>
-        <a class="proof" href="assets/badge2.png" target="_blank">Proof of Education</a>
-        <br>
-        <a class="course" href="https://www.youtube.com/playlist?list=PLkWv3oO4kHnu095L52vLCVK8YN33yRrd_" target="_blank">Find Out More</a>
-      </div>
-      <div class="card">
-        <h4>Cisco CyberOps Associate</h4>
-        <p class="label">Cisco Networking Academy — Coursework (University requirement)</p>
-        <p class="small-text">
-          Course content undertaken as part of the Networks and Cybersecurity [ENGR1762] class at Flinders University (certification not completed).
-        </p>
-        <a class="course" href="https://www.netacad.com/courses/cyberops-associate" target="_blank">Find Out More</a>
-      </div>
-      <div class="card">
-        <h4>Cisco CCNAv7 itn</h4>
-        <p class="label">Cisco Networking Academy — Coursework (University requirement)</p>
-        <p class="small-text">
-          Course content undertaken as part of the Networking Fundamentals [ENGR2871] class at Flinders University (certification not completed).
-        </p>
-        <a class="proof" href="assets/ccnav7.png" target="_blank">Proof of Education</a>
-        <br>
-        <a class="course" href="https://www.netacad.com/courses/ccna-introduction-networks?courseLang=en-US&instance_id=786aa06c-a802-4401-9186-d53b8d97d6f0" target="_blank">Find Out More</a>
-      </div>
+    <div class="section-intro">
+      <p class="label">04 / Academic Background</p>
+      <h2>Education & Courses</h2>
+
+      <p class="small-text">
+        University studies, completed courses and independent learning.
+      </p>
     </div>
+
+
+    <!-- Degree -->
+    <div class="resource-group">
+
+      <div class="resource-group-heading">
+        <p class="label">04.1 / University</p>
+        <h3>Degree</h3>
+      </div>
+
+      <div class="education">
+
+        <article class="card">
+
+          <span class="tag">2025 – Present</span>
+
+          <h4>Bachelor of Information Technology (Machine Learning)</h4>
+
+          <p class="resource-author">Flinders University</p>
+
+          <p class="small-text">
+            Commenced in 2025. This course is no longer admitting new
+            students from 2026. Existing students continue under their
+            applicable course rules.
+          </p>
+
+          <a
+            href="https://handbook.flinders.edu.au/courses/2025/bitmlfp?year=2025"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View 2025 Course Handbook ↗
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+
+
+    <!-- Certificates and Online Courses -->
+    <div class="resource-group">
+
+      <div class="resource-group-heading">
+        <p class="label">04.2 / Professional Development</p>
+        <h3>Certificates & Online Courses</h3>
+      </div>
+
+      <p class="small-text course-note">
+        "Proof of Education" links may lead to certificates, badges
+        or other forms of verification depending on the course provider.
+        Some courses may also have undergone changes in their name,
+        curriculum or structure since completion.
+      </p>
+
+      <div class="education">
+
+        <article class="card">
+
+          <h4>Introduction to Prompt Engineering</h4>
+
+          <p class="label">Simplilearn</p>
+
+          <a
+            href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0MjgzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzUyMzk5N183Njk4OTU3MTczMDc3ODE4NjI1OS5wbmciLCJ1c2VybmFtZSI6Ik5naGlhIER1YyBUcmFuIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F7216%2FIntroduction-to-Prompt-Engineering%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1533307683206201973&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVz0kzLfNPKnRO90%2ByrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAOabhmtBAAAA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Proof of Education ↗
+          </a>
+
+          <a
+            class="course"
+            href="https://www.simplilearn.com/prompt-engineering-free-course-skillup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Course Details ↗
+          </a>
+
+        </article>
+
+
+        <article class="card">
+
+          <h4>Machine Learning for Beginners: First Step to Become a Machine Learning Engineer</h4>
+
+          <p class="label">Simplilearn</p>
+
+          <a
+            href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjU4IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzU0Mjc4Nl83Njk4OTU3MTczMTIxMzQ1MDcxMi5wbmciLCJ1c2VybmFtZSI6Ik5naGlhIER1YyBUcmFuIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6046%2FMachine-Learning-for-Beginners-%3A-First-step-to-become-a-Machine-learning-Engineer%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1533314075085171536&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVT4owLvAtdY7M90%2ByrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAOkmBalBAAAA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Proof of Education ↗
+          </a>
+
+          <a
+            class="course"
+            href="https://www.simplilearn.com/free-machine-learning-beginners-course-skillup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Course Details ↗
+          </a>
+
+        </article>
+
+
+        <article class="card">
+
+          <h4>Learn HTML</h4>
+
+          <p class="resource-author">Google</p>
+
+          <p class="small-text">No certificate available.</p>
+
+          <a
+            href="assets/Certificate1.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Proof of Education ↗
+          </a>
+
+          <a
+            class="course"
+            href="https://developers.google.com/profile/badges/playlists/webdev/learn-html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Course Details ↗
+          </a>
+
+        </article>
+
+
+        <article class="card">
+
+          <h4>JavaScript Essentials 1</h4>
+
+          <p class="resource-author">Cisco Networking Academy</p>
+
+          <span class="tag">Abandoned </span>
+
+          <p class="small-text">
+            Not completed – approximately 27% complete.
+          </p>
+
+          <a
+            class="course"
+            href="https://www.netacad.com/courses/javascript-essentials-1?courseLang=en-US"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Course Details ↗
+          </a>
+
+        </article>
+
+
+        <article class="card">
+
+          <h4>Python – Visually Explained</h4>
+
+          <p class="resource-author">YouTube</p>
+
+          <span class="tag">In Progress</span>
+
+          <a
+            class="course"
+            href="https://www.youtube.com/playlist?list=PL8HmoRTjTSlEgS2GsFaDr9zDLC1xD9FZf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Course Details ↗
+          </a>
+
+        </article>
+
+
+        <article class="card">
+
+          <h4>NumPy</h4>
+
+          <p class="resource-author">Codédex</p>
+
+          <a
+            href="assets/badge1.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Proof of Education ↗
+          </a>
+
+          <a
+            class="course"
+            href="https://www.codedex.io/numpy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Course Details ↗
+          </a>
+
+        </article>
+
+
+        <article class="card">
+
+          <h4>Machine Learning for Beginners</h4>
+
+          <p class="resource-author">Kylie Ying / YouTube</p>
+
+          <a
+            href="assets/badge2.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Proof of Education ↗
+          </a>
+
+          <a
+            class="course"
+            href="https://www.youtube.com/playlist?list=PLkWv3oO4kHnu095L52vLCVK8YN33yRrd_"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Course Details ↗
+          </a>
+
+        </article>
+
+
+        <article class="card">
+
+          <h4>Cisco CyberOps Associate</h4>
+
+          <p class="resource-author">
+            Cisco Networking Academy
+          </p>
+
+          <span class="tag">University Coursework</span>
+
+          <p class="small-text">
+            Course content undertaken as part of Networks and
+            Cybersecurity (ENGR1762) at Flinders University.
+            Certification not completed.
+          </p>
+
+          <a
+            class="course"
+            href="https://www.netacad.com/courses/cyberops-associate"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Course Details ↗
+          </a>
+
+        </article>
+
+
+        <article class="card">
+
+              <h4>Cisco CCNAv7 – Introduction to Networks (ITN)</h4>
+
+              <p class="resource-author">
+                Cisco Networking Academy
+              </p>
+
+              <span class="tag">Course Assessments Passed</span>
+
+              <p class="small-text">
+                Undertaken as part of Networking Fundamentals (ENGR2871)
+                at Flinders University. Successfully passed the course
+                assessments and earned the associated badge. The full
+                course was not completed.
+              </p>
+
+              <a
+                href="https://www.credly.com/badges/1a9b03b7-793a-47c1-871f-8df4a0c732be/linked_in_profile"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Course Badge ↗
+              </a>
+
+              <a
+                class="course"
+                href="https://www.netacad.com/courses/ccna-introduction-networks?courseLang=en-US&instance_id=786aa06c-a802-4401-9186-d53b8d97d6f0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Course Details ↗
+              </a>
+
+            </article>
+        </article>
+
+      </div>
+
+    </div>
+
   </section>
 
-  <section>
-    <h2>Learning Profiles</h2>
+
+  <!-- Learning Profiles -->
+  <section id="learning-profiles">
+
+    <div class="section-intro">
+      <p class="label">05 / Learning Beyond University</p>
+      <h2>Learning Profiles</h2>
+
+      <p class="small-text">
+        Platforms where I track my independent learning,
+        courses and programming exercises.
+      </p>
+    </div>
+
     <div class="education">
-      <div class="card">
+
+      <article class="card">
+
         <h3>Codecademy</h3>
-        <p>Track my courses and projects</p>
-        <a href="https://www.codecademy.com/profiles/nghiaductran" target="_blank">Visit Profile</a>
-        <div class="date-joined-overlay">Joined: Aug 19, 2021</div>
-      </div>
-      <div class="card">
+
+        <p class="small-text">
+          Track my courses and programming projects.
+        </p>
+
+        <a
+          href="https://www.codecademy.com/profiles/nghiaductran"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Profile ↗
+        </a>
+
+        <div class="date-joined-overlay">
+          Joined: August 19, 2021
+        </div>
+
+      </article>
+
+
+      <article class="card">
+
         <h3>Codédex</h3>
-        <p>View my learning progress and exercises</p>
-        <a href="https://www.codedex.io/@Bleumino" target="_blank">Visit Profile</a>
-        <div class="date-joined-overlay">Joined: Dec 2025</div>
+
+        <p class="small-text">
+          View my learning progress and programming exercises.
+        </p>
+
+        <a
+          href="https://www.codedex.io/@Bleumino"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Profile ↗
+        </a>
+
+        <div class="date-joined-overlay">
+          Joined: December 2025
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- About -->
+  <section id="about">
+
+    <div class="section-intro">
+      <p class="label">06 / BEHIND THE SCREEN</p>
+      <h2>A Little About Me</h2>
+
+      <p class="small-text">
+        A little more about what I enjoy, what I study and what keeps me curious.
+      </p>
+    </div>
+
+    <div class="about-layout">
+
+      <div class="about-main">
+
+        <span class="about-greeting">A LITTLE INTRODUCTION ✳</span>
+
+        <h3>
+          Curious about how things work,
+          <span>and always looking for something new to learn.</span>
+        </h3>
+
+        <p>
+          I'm a Bachelor of IT (Machine Learning) student who enjoys
+          building things from scratch, exploring technology and
+          experimenting with creative projects.
+        </p>
+
+        <p>
+          Outside programming, I'm interested in learning languages
+          to a conversational level, creating digital content and
+          discovering new ways to express ideas.
+        </p>
+
+        <p>
+          I value clarity, creativity and understanding the systems
+          behind the things we use every day.
+        </p>
+
       </div>
+
+
+      <div class="about-notes">
+
+        <article class="about-note">
+
+          <span class="about-note-icon">⌘</span>
+
+          <div>
+            <h4>What I study</h4>
+            <p>Information Technology and Machine Learning.</p>
+          </div>
+
+        </article>
+
+
+        <article class="about-note">
+
+          <span class="about-note-icon">✳</span>
+
+          <div>
+            <h4>What I enjoy</h4>
+            <p>Programming, languages learning, drawing and content creation.</p>
+          </div>
+
+        </article>
+
+
+        <article class="about-note">
+
+          <span class="about-note-icon">↗</span>
+
+          <div>
+            <h4>How I learn</h4>
+            <p>Independent study, practical projects and experimentation.</p>
+          </div>
+
+        </article>
+
+      </div>
+
     </div>
+
+
+    <div class="about-footer">
+      <span>BUILT ON CURIOSITY</span>
+      <span>ONE PROJECT AT A TIME ✦</span>
+    </div>
+
   </section>
 
-  <section>
-    <h2>About</h2>
-    <p style="max-width: 700px; color: var(--muted);">
-      I'm a Bachelor of IT (Machine Learning) student who enjoys building things from
-      scratch, learning languages to at least a conversational level (well, at least I'm trying to), and experimenting with digital
-      identities and content. I care about clarity, taste, and understanding how systems work.
-    </p>
-  </section>
 
-  <section>
-    <h2>Connect with Me</h2>
-    <a href="https://www.google.com/maps/place/Adelaide+SA/@-35.0720392,138.0860015,9.1z/data=!4m6!3m5!1s0x6ab735c7c526b33f:0x4033654628ec640!8m2!3d-34.9284989!4d138.6007456!16zL20vMG1ncA?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" class="label" target="_blank" style="text-decoration: none;">
-      Based in Adelaide, Australia
-    </a>
+  <!-- Contact -->
+  <section id="contact">
+
+    <div class="section-intro">
+      <p class="label">07 / Get in Touch</p>
+      <h2>Connect with Me</h2>
+
+      <p class="small-text">
+        Based in Adelaide, Australia.
+      </p>
+    </div>
+
     <div class="socials">
-      <a href="https://www.linkedin.com/in/nghia-tran-b59615331/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/bleumino" target="_blank">GitHub</a>
-      <a href="https://www.instagram.com/bleumino1/" target="_blank">Instagram</a>
-      <a rel="me" href="https://mastodon.social/@bleumino1" target="_blank">Mastodon</a>
+
+      <a
+        href="https://www.linkedin.com/in/nghia-tran-b59615331/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://github.com/bleumino"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="https://www.instagram.com/bleumino1/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://mastodon.social/@bleumino1"
+        target="_blank"
+        rel="me noopener noreferrer"
+      >
+        Mastodon
+      </a>
+
     </div>
+
   </section>
 
-  <footer>
-    © 2025 Nghia · Built mostly using ChatGPT and Claude because I was too lazy to code most of it myself. · Last updated on the 9/10/2026
-  </footer>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
+
 </body>
 </html>

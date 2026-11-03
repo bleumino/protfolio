@@ -1,250 +1,575 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="beDcdknWWQ6SvT6MtRnui1KJXIepXS3HQRD0LUOJaZk" />
-  <title>Nghia – Portfolio</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="google-site-verification" content="beDcdknWWQ6SvT6MtRnui1KJXIepXS3HQRD0LUOJaZk">
+  <meta name="description" content="A collection of resources used in my self-study journey through robotics engineering, mathematics, physics and electronics.">
+
+  <title>Robotics Study Resources – Nghia</title>
+
   <script>
     (function () {
-      var saved = localStorage.getItem('theme');
-      var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-      var isLight = saved ? saved === 'light' : prefersLight;
-      if (isLight) document.documentElement.classList.add('light');
+      try {
+        const saved = localStorage.getItem('theme');
+        const prefersLight = window.matchMedia(
+          '(prefers-color-scheme: light)'
+        ).matches;
+
+        const isLight = saved
+          ? saved === 'light'
+          : prefersLight;
+
+        if (isLight) {
+          document.documentElement.classList.add('light');
+        }
+      } catch (error) {
+        // Use the default theme if storage is unavailable.
+      }
     })();
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div id="loader">
-    <div class="loader-content">
-      <span class="loader-text">Loading Portfolio</span>
-    </div>
-  </div>
+  <!-- Navigation -->
+  <nav class="winbar" aria-label="Main navigation">
 
-  <nav class="winbar">
-    <div class="winbar-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-    <span class="winbar-path">~/nghia/robotics</span>
+    <a href="index.html" class="site-brand">
+      NGHIA DUC TRAN
+    </a>
+
     <div class="winbar-links">
-      <a href="index.html">index.html</a>
+      <a href="index.html">Portfolio</a>
+      <a href="#study-resources">Resources</a>
+      <a href="#other-resources">Additional Resources</a>
+      <a href="#contact">Contact</a>
     </div>
-    <div class="dark-light-toggle">
-      <input type="checkbox" class="checkbox" id="checkbox">
-      <label for="checkbox" class="checkbox-label">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-        <span class="ball"></span>
-      </label>
-    </div>
+
+    <div class="theme-toggle">
+  <input type="checkbox" id="checkbox" class="checkbox">
+  <label for="checkbox" class="checkbox-label">
+    <span>☀️</span>
+    <span>🌙</span>
+    <span class="ball"></span>
+  </label>
+</div>
   </nav>
 
-  <header>
-    <p class="prompt-line"><span class="prompt-user">visitor@nghia</span><span class="prompt-sep">:~$</span> cat robotics_journey.md</p>
-    <h3>
-      After discovering the rapid growth of physical AI, I decided to self-study
-      <span class="gradient-text">robotics engineering</span> using Flinders University's 2025
-      <span class="gradient-text">Bachelor of Engineering (Robotics) (Honours)</span>
-      study plan to build the knowledge and skills needed to enter the field. So I present the list of all of the study resources that I used along my journey.
-    </h3>
-    <p class="small-text">
-      These are the topics that I self-studied or plan to study: Physics 1A [PHYS1101], Engineering Maths [ENGR2711], Electronics [ENGR1201], Signals and Systems [ENGR2722], Electronic Circuits [ENGR2731], Sensors and Actuators [ENGR2772], Robotic Systems [ENGR3771], Control Systems [ENGR3711].
+
+  <!-- Hero -->
+  <header class="robotics-hero">
+
+    <p class="label">Independent Learning / Robotics Engineering</p>
+
+    <h1>
+      Exploring
+      <span class="gradient-text">Robotics Engineering.</span>
+    </h1>
+
+    <p class="lead">
+      After discovering the rapid growth of physical AI, I decided to
+      independently study robotics engineering and build the foundations
+      needed to enter the field.
     </p>
+
+    <p class="small-text">
+      My learning roadmap is based on Flinders University's 2025
+      Bachelor of Engineering (Robotics) (Honours) study plan.
+      This page documents the resources I've used along the way.
+    </p>
+
+    <div class="robotics-topics">
+      <p class="label">Areas of study</p>
+
+      <div class="topic-list">
+        <a href="https://handbook.flinders.edu.au/topics/2025/phys1101" target="_blank" rel="noopener noreferrer"> Physics 1A · PHYS1101 </a>
+        <a href="https://handbook.flinders.edu.au/topics/2025/engr2711" target="_blank" rel="noopener noreferrer"> Engineering Maths · ENGR2711 </a>
+        <a href="https://handbook.flinders.edu.au/topics/2025/engr1201" target="_blank" rel="noopener noreferrer"> Electronics · ENGR1201 </a>
+        <a href="https://handbook.flinders.edu.au/topics/2025/engr2722" target="_blank" rel="noopener noreferrer"> Signals and Systems · ENGR2722 </a>
+        <a href="https://handbook.flinders.edu.au/topics/2025/engr2731" target="_blank" rel="noopener noreferrer"> Electronic Circuits · ENGR2731 </a>
+        <a href="https://handbook.flinders.edu.au/topics/2025/engr2772" target="_blank" rel="noopener noreferrer"> Sensors and Actuators · ENGR2772</a>
+        <a href="https://handbook.flinders.edu.au/topics/2025/engr3771" target="_blank" rel="noopener noreferrer"> Robotic Systems · ENGR3771</a>
+        <a href="https://handbook.flinders.edu.au/topics/2025/engr3711" target="_blank" rel="noopener noreferrer"> Control Systems · ENGR3711 </a>
+      </div>
+
+      <p>Course selection: These subjects are based on the 2025 Flinders University curriculum, the year I commenced my degree. I selected them to highlight the mathematics, physics, electronics, robotics and control systems knowledge relevant to robotics, presenting them as a focused, minor-like area of study within my broader degree.</p>
+    </div>
+
+    <a href="#study-resources" class="hero-link">
+      Explore study resources <span aria-hidden="true">↓</span>
+    </a>
+
   </header>
 
-  <section>
-    <h2>Study resources</h2>
 
-    <div class="terminal-search">
-      <span class="prompt">$</span>
-      <input type="text" id="resource-search" placeholder="search resources.md --tag=PHYS1101" autocomplete="off">
+  <!-- Study Resources -->
+  <section id="study-resources">
+
+    <div class="section-intro">
+      <p class="label">01 / Learning Library</p>
+      <h2>Study Resources</h2>
+
+      <p class="small-text">
+        A collection of videos, lectures and learning materials
+        covering the mathematical, physical and engineering foundations
+        of robotics.
+      </p>
     </div>
 
-    <h3>YouTube</h3>
-    <div class="education">
-      <div class="card" data-category="math" data-tags="ENGR2711 calculus">
-        <span class="tag tag-math">ENGR2711</span>
-        <h4>Vector Calculus</h4>
-        <p>by Math with Dr. Claire</p>
-        <p class="small-text">
-          A full vector calc course! Learn about vectors, 3D space, dot products and cross products, planes and lines, and gradients and partial derivatives. (Calculus 3, maybe Calculus 4 depending on your curriculum. Multivariable calculus!)
-        </p>
-        <a href="https://www.youtube.com/playlist?list=PLVTG-sq2TyyF4mGZbAyhcYc9t6ut5aW15" target="_blank">Find Out More</a>
+
+    <!-- Search -->
+    <div class="resource-search">
+      <label for="resource-search">
+        Search the resource library
+      </label>
+
+      <input
+        type="search"
+        id="resource-search"
+        placeholder="Search by topic, course code or keyword..."
+        autocomplete="off"
+        aria-label="Search study resources"
+      >
+    </div>
+
+
+    <!-- YouTube -->
+    <div class="resource-group">
+
+      <div class="resource-group-heading">
+        <p class="label">01.1 / Video Learning</p>
+        <h3>YouTube</h3>
       </div>
 
-      <div class="card" data-category="math" data-tags="ENGR2711 calculus">
-        <span class="tag tag-math">ENGR2711</span>
-        <h4>Multivariable Calculus (Calc III) - Complete Semester Course</h4>
-        <p>by Dr. Bevin Maultsby</p>
-        <p class="small-text">
-          This is the entire semester of my Multivariable Calculus course (MA 242 at NC State University). These videos are based off of my own notes. Here are the seven units in this course:
-          Unit 1: Geometry and Vectors in (x,y) and (x,y,z)-space
-          Unit 2: The geometry of curves
-          Unit 3: Differentiable Multivariable Calculus
-          Unit 4: Multiple integrals (in Cartesian coordinates)
-          Unit 5: Multiple integrals (in polar and spherical coordinates)
-          Unit 6: Vector fields, line and surface integrals
-          Unit 7: the Fundamental Theorems (Green's, Stokes', Divergence)
-        </p>
-        <a href="https://www.youtube.com/playlist?list=PLBEl4BT8wUgOqJCBijQxClMIuumgtMinc" target="_blank">Find Out More</a>
-      </div>
+      <div class="education">
 
-      <div class="card" data-category="electronics" data-tags="ENGR2731 circuits">
-        <span class="tag tag-electronics">ENGR2731</span>
-        <h4>Electronic Circuits</h4>
-        <p>by The Organic Chemistry Tutor</p>
-        <p class="small-text"></p>
-        <a href="https://www.youtube.com/playlist?list=PL0o_zxa4K1BV9E-N8tSExU1djL6slnjbL" target="_blank">Find Out More</a>
-      </div>
+        <article class="card" data-category="math" data-tags="ENGR2711 calculus vector calculus multivariable">
+          <span class="tag tag-math">ENGR2711</span>
 
-      <div class="card" data-category="math" data-tags="ENGR2711 differential equations">
-        <span class="tag tag-math">ENGR2711</span>
-        <h4>Differential Equations</h4>
-        <p>by Krista King</p>
-        <p class="small-text">
-          This Differential Equations playlist includes introduction to differential equations, Euler's method, separable differential equations, logistic models, exact and linear differential equations, second-order homogeneous and second-order nonhomogeneous, Laplace transforms, and series solutions to systems.
-        </p>
-        <a href="https://www.youtube.com/playlist?list=PLJ8OrXpbC-BO2zEW58TpHHakh5nodn3-i" target="_blank">Find Out More</a>
-      </div>
+          <h4>Vector Calculus</h4>
+          <p class="resource-author">Math with Dr. Claire</p>
 
-      <div class="card" data-category="physics" data-tags="PHYS1101 statics">
-        <span class="tag tag-physics">PHYS1101</span>
-        <h4>Static Equilibrium - Tension, Torque, Lever, Beam, & Ladder Problem - Physics</h4>
-        <p>by The Organic Chemistry Tutor</p>
-        <p class="small-text">
-          This physics video tutorial explains the concept of static equilibrium - translational & rotational equilibrium where everything is at rest and there's no motion. This video contains plenty of examples and practice problems.
-        </p>
-        <a href="https://www.youtube.com/watch?v=qGvFAl5CK_c&t=1076s" target="_blank">Find Out More</a>
-      </div>
+          <p class="small-text">
+            A full vector calculus course! Learn about vectors, 3D space,
+            dot products and cross products, planes and lines, gradients
+            and partial derivatives. This is multivariable calculus,
+            often called Calculus III.
+          </p>
 
-      <div class="card" data-category="math" data-tags="ENGR2711 calculus">
-        <span class="tag tag-math">ENGR2711</span>
-        <h4>Calculus III</h4>
-        <p>by Krista King</p>
-        <p class="small-text">
-          Partial Derivatives — includes limits and continuity of multivariable functions, partial derivatives, tangent planes and normal lines, linear approximation and linearization, differentials, chain rule, implicit differentiation, directional derivatives, gradient vectors, optimization and applied optimization, and Lagrange multipliers.
-          <br><br>
-          Multiple Integrals — includes approximating double and triple integrals, double and triple integrals, double polar integrals, double and triple integral applications, triple integrals in cylindrical and spherical coordinates, and change of variables.
-          <br><br>
-          Vectors — includes three-dimensional coordinate systems, vectors, dot and cross products, lines and planes, cylinders and quadric surfaces, vector functions and space curves, derivatives and integrals of vector functions, arc length and curvature, velocity and acceleration, line integrals, Green's theorem, curl and divergence, parametric surfaces and areas, and surface integrals.
-          <br><br>
-          Differential Equations — includes linear, separable, and exact differential equations, population modeling, Euler's method, second-order homogeneous and nonhomogeneous differential equations, and Laplace transforms.
-        </p>
-        <a href="https://www.youtube.com/playlist?list=PLJ8OrXpbC-BMdeuQfJDVRJ5DPMduSzVow" target="_blank">Find Out More</a>
-      </div>
+          <a href="https://www.youtube.com/playlist?list=PLVTG-sq2TyyF4mGZbAyhcYc9t6ut5aW15"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
 
-      <div class="card" data-category="physics" data-tags="PHYS1101 electromagnetism">
-        <span class="tag tag-physics">PHYS1101</span>
-        <h4>Maxwell's Equations, Electromagnetic Waves, Displacement Current, & Poynting Vector - Physics</h4>
-        <p>by The Organic Chemistry Tutor</p>
-        <p class="small-text">
-          This physics video tutorial provides a basic introduction into Maxwell's equations and electromagnetic waves. Maxwell's four equations include Gauss' law for electric fields and magnetic fields, Ampere's law for magnetic fields, and Faraday's law for electric fields. It covers displacement current, electromagnetic wave calculations, and the Poynting vector, with plenty of practice problems.
-        </p>
-        <a href="https://www.youtube.com/watch?v=mOEFTX9DAEw&t=923s" target="_blank">Find Out More</a>
-      </div>
 
-      <div class="card" data-category="physics" data-tags="PHYS1101 electromagnetism">
-        <span class="tag tag-physics">PHYS1101</span>
-        <h4>Maxwell's Equations - The Ultimate Beginner's Guide</h4>
-        <p>by Up and Atom</p>
-        <p class="small-text"></p>
-        <a href="https://www.youtube.com/watch?v=F3QHUvr8d8I" target="_blank">Find Out More</a>
-      </div>
+        <article class="card" data-category="math" data-tags="ENGR2711 calculus vector calculus multivariable integrals">
+          <span class="tag tag-math">ENGR2711</span>
 
-      <div class="card" data-category="electronics" data-tags="ENGR1201 logic gates">
-        <span class="tag tag-electronics">ENGR1201</span>
-        <h4>Logic Gates, Truth Tables, Boolean Algebra AND, OR, NOT, NAND & NOR</h4>
-        <p>by The Organic Chemistry Tutor</p>
-        <p class="small-text">
-          This electronics video provides a basic introduction into logic gates, truth tables, and simplifying Boolean algebra expressions. It discusses logic gates such as the AND, OR, NOT, NAND and NOR gates. This video is for college students who are taking introduction to logic design.
-        </p>
-        <a href="https://youtu.be/JQBRzsPhw2w?si=-fs2G2sUigz2V9Fh" target="_blank">Find Out More</a>
-      </div>
+          <h4>Multivariable Calculus (Calc III) – Complete Semester Course</h4>
+          <p class="resource-author">Dr. Bevin Maultsby</p>
 
-      <div class="card" data-category="electronics" data-tags="ENGR2731 circuits">
-        <span class="tag tag-electronics">ENGR2731</span>
-        <h4>Electronic Circuits (2026)</h4>
-        <p>by Engineering with Prof. Kim</p>
-        <p class="small-text">
-          Lecture and practice problem videos for Electronic Circuits at National Taiwan University.
-        </p>
-        <a href="https://www.youtube.com/playlist?list=PLmK1EnKxphin6PJ9_j690iKLMd3WA0-7f" target="_blank">Find Out More</a>
+          <p class="small-text">
+            A complete semester of Multivariable Calculus (MA 242 at
+            NC State University), organised into seven units:
+            geometry and vectors, curves, differentiable multivariable
+            calculus, multiple integrals, vector fields, line and surface
+            integrals, and the fundamental theorems.
+          </p>
+
+          <a href="https://www.youtube.com/playlist?list=PLBEl4BT8wUgOqJCBijQxClMIuumgtMinc"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="electronics" data-tags="ENGR2731 electronics circuits">
+          <span class="tag tag-electronics">ENGR2731</span>
+
+          <h4>Electronic Circuits</h4>
+          <p class="resource-author">The Organic Chemistry Tutor</p>
+
+          <p class="small-text">
+            A collection of tutorials covering electronic circuits
+            and related electrical engineering concepts.
+          </p>
+
+          <a href="https://www.youtube.com/playlist?list=PL0o_zxa4K1BV9E-N8tSExU1djL6slnjbL"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="math" data-tags="ENGR2711 differential equations calculus">
+          <span class="tag tag-math">ENGR2711</span>
+
+          <h4>Differential Equations</h4>
+          <p class="resource-author">Krista King</p>
+
+          <p class="small-text">
+            Covers introductory differential equations, Euler's method,
+            separable differential equations, logistic models, exact and
+            linear differential equations, second-order homogeneous and
+            nonhomogeneous equations, Laplace transforms and systems.
+          </p>
+
+          <a href="https://www.youtube.com/playlist?list=PLJ8OrXpbC-BO2zEW58TpHHakh5nodn3-i"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="physics" data-tags="PHYS1101 statics equilibrium tension torque physics">
+          <span class="tag tag-physics">PHYS1101</span>
+
+          <h4>Static Equilibrium – Tension, Torque, Lever, Beam and Ladder Problems</h4>
+          <p class="resource-author">The Organic Chemistry Tutor</p>
+
+          <p class="small-text">
+            An introduction to static equilibrium, including
+            translational and rotational equilibrium. Contains worked
+            examples and practice problems involving tension, torque
+            and forces.
+          </p>
+
+          <a href="https://www.youtube.com/watch?v=qGvFAl5CK_c&t=1076s"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="math" data-tags="ENGR2711 calculus partial derivatives multiple integrals vectors differential equations">
+          <span class="tag tag-math">ENGR2711</span>
+
+          <h4>Calculus III</h4>
+          <p class="resource-author">Krista King</p>
+
+          <p class="small-text">
+            A broad collection of Calculus III topics, organised into
+            several areas:
+          </p>
+
+          <p class="small-text">
+            <strong>Partial Derivatives</strong> — limits and continuity,
+            partial derivatives, tangent planes, linear approximation,
+            chain rule, directional derivatives, gradients, optimisation
+            and Lagrange multipliers.
+          </p>
+
+          <p class="small-text">
+            <strong>Multiple Integrals</strong> — double and triple
+            integrals, polar coordinates, cylindrical and spherical
+            coordinates, applications and change of variables.
+          </p>
+
+          <p class="small-text">
+            <strong>Vectors</strong> — coordinate systems, dot and cross
+            products, lines and planes, vector functions, arc length,
+            curvature, line integrals, Green's theorem, curl, divergence
+            and surface integrals.
+          </p>
+
+          <p class="small-text">
+            <strong>Differential Equations</strong> — linear, separable
+            and exact equations, population modelling, Euler's method,
+            second-order equations and Laplace transforms.
+          </p>
+
+          <a href="https://www.youtube.com/playlist?list=PLJ8OrXpbC-BMdeuQfJDVRJ5DPMduSzVow"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="physics" data-tags="PHYS1101 electromagnetism maxwell equations electromagnetic waves">
+          <span class="tag tag-physics">PHYS1101</span>
+
+          <h4>Maxwell's Equations, Electromagnetic Waves and Poynting Vector</h4>
+          <p class="resource-author">The Organic Chemistry Tutor</p>
+
+          <p class="small-text">
+            An introduction to Maxwell's equations and electromagnetic
+            waves. Covers Gauss's laws, Ampere's law, Faraday's law,
+            displacement current, electromagnetic wave calculations
+            and the Poynting vector.
+          </p>
+
+          <a href="https://www.youtube.com/watch?v=mOEFTX9DAEw&t=923s"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="physics" data-tags="PHYS1101 electromagnetism maxwell equations">
+          <span class="tag tag-physics">PHYS1101</span>
+
+          <h4>Maxwell's Equations – The Ultimate Beginner's Guide</h4>
+          <p class="resource-author">Up and Atom</p>
+
+          <p class="small-text">
+            A beginner-friendly introduction to Maxwell's equations
+            and their role in understanding electromagnetism.
+          </p>
+
+          <a href="https://www.youtube.com/watch?v=F3QHUvr8d8I"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="electronics" data-tags="ENGR1201 logic gates boolean algebra digital electronics">
+          <span class="tag tag-electronics">ENGR1201</span>
+
+          <h4>Logic Gates, Truth Tables and Boolean Algebra</h4>
+          <p class="resource-author">The Organic Chemistry Tutor</p>
+
+          <p class="small-text">
+            An introduction to logic gates, truth tables and simplifying
+            Boolean algebra expressions. Covers AND, OR, NOT, NAND
+            and NOR gates.
+          </p>
+
+          <a href="https://youtu.be/JQBRzsPhw2w?si=-fs2G2sUigz2V9Fh"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="electronics" data-tags="ENGR2731 circuits electronic circuits">
+          <span class="tag tag-electronics">ENGR2731</span>
+
+          <h4>Electronic Circuits (2026)</h4>
+          <p class="resource-author">Engineering with Prof. Kim</p>
+
+          <p class="small-text">
+            Lecture and practice problem videos for Electronic Circuits
+            at National Taiwan University.
+          </p>
+
+          <a href="https://www.youtube.com/playlist?list=PLmK1EnKxphin6PJ9_j690iKLMd3WA0-7f"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="math" data-tags="ENGR2722 signals systems fourier series fourier transform">
+          <span class="tag">ENGR2722</span>
+
+          <h4>The Fourier Series and Fourier Transform Demystified</h4>
+          <p class="resource-author">Video resource</p>
+
+          <p class="small-text">
+            An introduction to Fourier series and Fourier transforms,
+            important mathematical tools for analysing signals and
+            systems.
+          </p>
+
+          <a href="https://youtu.be/mgXSevZmjPc?si=N3kyEsmXo6VDo0uT"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
       </div>
     </div>
+
   </section>
 
-  <br>
 
-  <section>
-    <h3>Other (courses, pdfs, books, etc.)</h3>
-    <div class="education">
-      <div class="card" data-category="programming" data-tags="ML machine learning">
-        <span class="tag tag-programming">ML</span>
-        <h4>Machine Learning Crash Course</h4>
-        <p>By Google</p>
-        <p class="small-text">
-          Google's fast-paced, practical introduction to machine learning, featuring a series of animated videos, interactive visualizations, and hands-on practice exercises.
-        </p>
-        <a href="https://developers.google.com/machine-learning/crash-course" target="_blank">Find Out More</a>
+  <!-- Additional Resources -->
+  <section id="other-resources">
+
+    <div class="section-intro">
+      <p class="label">02 / Further Reading</p>
+      <h2>Other Resources</h2>
+
+      <p class="small-text">
+        Additional courses, textbooks, lecture notes and reference
+        materials that complement my independent studies.
+      </p>
+    </div>
+
+
+    <div class="resource-group">
+
+      <div class="resource-group-heading">
+        <p class="label">02.1 / Courses and Reference Materials</p>
+        <h3>Beyond YouTube</h3>
       </div>
 
-      <div class="card" data-category="math" data-tags="ENGR2711 calculus">
-        <span class="tag tag-math">ENGR2711</span>
-        <h4>Double Integrals</h4>
-        <p>By Stewart Calculus</p>
-        <p class="small-text"></p>
-        <a href="https://www.stewartcalculus.com/data/default/upfiles/09631_Double%20Integrals_ptg1_hr_stu_001-010.pdf" target="_blank">Find Out More</a>
-      </div>
+      <div class="education">
 
-      <div class="card" data-category="electronics" data-tags="ENGR1201 logic gates">
-        <span class="tag tag-electronics">ENGR1201</span>
-        <h4>Logic Gates</h4>
-        <p>By Stanford University</p>
-        <p class="small-text"></p>
-        <a href="https://web.stanford.edu/class/archive/engr/engr40m.1178/slides/logicgates.pdf" target="_blank">Find Out More</a>
-      </div>
+        <article class="card" data-category="programming" data-tags="ML machine learning artificial intelligence google">
+          <span class="tag tag-programming">ML</span>
 
-      <div class="card" data-category="math" data-tags="ENGR2711 differential equations">
-        <span class="tag tag-math">ENGR2711</span>
-        <h4>Introduction to Differential Equations</h4>
-        <p>By The Open University UK</p>
-        <p class="small-text">
-          Differential equations are any equations that include derivatives and arise in many situations. This free course, Introduction to Differential Equations, considers three types of first-order differential equations. Section 1 introduces equations that can be solved by direct integration and section 2 the method of separation of variables. Section 3 looks at applications of differential equations for solving real world problems. Section 4 introduces the integrating factor method for solving linear differential equations. The final two sections summarise and revise the methods introduced in the previous sections and describe various other approaches to finding solutions of first-order differential equations and to understanding the behaviour of the solutions.
-        </p>
-        <a href="https://www.open.edu/openlearn/science-maths-technology/introduction-differential-equations/content-section-0?active-tab=description-tab" target="_blank">Find Out More</a>
-      </div>
+          <h4>Machine Learning Crash Course</h4>
+          <p class="resource-author">Google</p>
 
-      <div class="card" data-category="electronics" data-tags="ENGR2731 phasors">
-        <span class="tag tag-electronics">ENGR2731</span>
-        <h4>Review of Phasor Notation</h4>
-        <p>By University of San Diego</p>
-        <p class="small-text">e^(jø) = cos(ø) + j·sin(ø)</p>
-        <a href="https://home.sandiego.edu/~ekim/e171f00/lectures/phasors.pdf" target="_blank">Find Out More</a>
+          <p class="small-text">
+            Google's practical introduction to machine learning,
+            featuring animated videos, interactive visualisations
+            and hands-on exercises.
+          </p>
+
+          <a href="https://developers.google.com/machine-learning/crash-course"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="math" data-tags="ENGR2711 calculus double integrals mathematics">
+          <span class="tag tag-math">ENGR2711</span>
+
+          <h4>Double Integrals</h4>
+          <p class="resource-author">Stewart Calculus</p>
+
+          <p class="small-text">
+            Reference material covering double integrals and their
+            applications in multivariable calculus.
+          </p>
+
+          <a href="https://www.stewartcalculus.com/data/default/upfiles/09631_Double%20Integrals_ptg1_hr_stu_001-010.pdf"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="electronics" data-tags="ENGR1201 logic gates digital electronics">
+          <span class="tag tag-electronics">ENGR1201</span>
+
+          <h4>Logic Gates</h4>
+          <p class="resource-author">Stanford University</p>
+
+          <p class="small-text">
+            Lecture material covering the fundamentals of digital
+            logic gates.
+          </p>
+
+          <a href="https://web.stanford.edu/class/archive/engr/engr40m.1178/slides/logicgates.pdf"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="math" data-tags="ENGR2711 differential equations calculus open university">
+          <span class="tag tag-math">ENGR2711</span>
+
+          <h4>Introduction to Differential Equations</h4>
+          <p class="resource-author">The Open University</p>
+
+          <p class="small-text">
+            A free course introducing first-order differential
+            equations. Covers direct integration, separation of
+            variables, real-world applications and the integrating
+            factor method, alongside other approaches to solving
+            differential equations.
+          </p>
+
+          <a href="https://www.open.edu/openlearn/science-maths-technology/introduction-differential-equations/content-section-0?active-tab=description-tab"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
+
+        <article class="card" data-category="electronics" data-tags="ENGR2731 phasors electrical engineering circuits">
+          <span class="tag tag-electronics">ENGR2731</span>
+
+          <h4>Review of Phasor Notation</h4>
+          <p class="resource-author">University of San Diego</p>
+
+          <p class="small-text">
+            Reference material covering phasor notation and its
+            application in electrical engineering.
+          </p>
+
+          <p class="small-text">
+            <strong>Euler's identity:</strong>
+            e<sup>jθ</sup> = cos(θ) + j sin(θ)
+          </p>
+
+          <a href="https://home.sandiego.edu/~ekim/e171f00/lectures/phasors.pdf"
+             target="_blank" rel="noopener noreferrer">
+            Explore resource ↗
+          </a>
+        </article>
+
       </div>
     </div>
+
   </section>
 
-  <br>
 
-  <section>
-    <h2>Connect with Me</h2>
-    <a href="https://www.google.com/maps/place/Adelaide+SA/@-35.0720392,138.0860015,9.1z/data=!4m6!3m5!1s0x6ab735c7c526b33f:0x4033654628ec640!8m2!3d-34.9284989!4d138.6007456!16zL20vMG1ncA?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" class="label" target="_blank" style="text-decoration: none;">
-      Based in Adelaide, Australia
-    </a>
+  <!-- Contact -->
+  <section id="contact">
+
+    <div class="section-intro">
+      <p class="label">03 / Get in Touch</p>
+      <h2>Connect with Me</h2>
+
+      <p class="small-text">
+        Based in Adelaide, Australia.
+      </p>
+    </div>
+
     <div class="socials">
-      <a href="https://www.linkedin.com/in/nghia-tran-b59615331/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/bleumino" target="_blank">GitHub</a>
-      <a href="https://www.instagram.com/bleumino1/" target="_blank">Instagram</a>
-      <a rel="me" href="https://mastodon.social/@bleumino1" target="_blank">Mastodon</a>
+
+      <a href="https://www.linkedin.com/in/nghia-tran-b59615331/"
+         target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/bleumino"
+         target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+
+      <a href="https://www.instagram.com/bleumino1/"
+         target="_blank" rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <a href="https://mastodon.social/@bleumino1"
+         target="_blank" rel="me noopener noreferrer">
+        Mastodon
+      </a>
+
     </div>
+
   </section>
 
+
+  <!-- Footer -->
   <footer>
-    © 2025 Nghia · Built mostly using ChatGPT and Claude because I was too lazy to code most of it myself. · Last updated on the 9/10/2026
+    <p>© 2025 Nghia</p>
+    <p>Built with curiosity and a little help from AI.</p>
+    <p>Last updated: 3 November 2026</p>
   </footer>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
